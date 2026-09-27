@@ -1,14 +1,71 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".HomeFragment">
+    android:fillViewport="true"
+    tools:context=".HomeFragment"
+    android:orientation="vertical"
+    android:padding="16dp">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <ImageView
+        android:id="@+id/img_class_banner"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Home Fragment" />
+        android:layout_height="180dp"
+        android:layout_marginBottom="16dp"
+        android:scaleType="centerCrop"
+        android:contentDescription="Banner kelas"
+        android:src="@drawable/banner" />
 
-</FrameLayout>
+    <TextView
+        android:id="@+id/tv_class_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Pemrograman Mobile • Kelas PL3B1"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="4dp" />
+
+    <TextView
+        android:id="@+id/tv_class_code"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Semester Ganjil 2026/2027"
+        android:textSize="14sp"
+        android:textColor="#757575" />
+
+    <TextView
+        android:id="@+id/tv_class_description_label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Deskripsi Kelas"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="4dp" />
+
+    <TextView
+        android:id="@+id/tv_class_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Kelas praktikum Pemrograman Mobile membahas pengembangan aplikasi Android menggunakan Kotlin."
+        android:textSize="14sp"
+        android:lineSpacingExtra="4dp" />
+
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_oop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Materi OOP"
+        android:layout_marginTop="24dp"
+        style="@style/CustomRoundedButton" />
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_android"
+        android:layout_marginTop="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Materi Android"
+        style="@style/CustomRoundedButton" />
+</LinearLayout>
